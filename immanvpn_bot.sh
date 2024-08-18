@@ -443,6 +443,7 @@ info_port() {
         portsqd=$(grep -w "Squid Proxy" /root/log-install.txt | awk '{print $5,$6}')
         portudpgw=$(grep -w "Badvpn" /root/log-install.txt | awk '{print $4}')
         portnginx=$(grep -w "Nginx" /root/log-install.txt | awk '{print $NF}')
+        slowdns=$(grep -w "SlowDNS" /root/log-install.txt | awk '{print $NF}')
         portwstls=$(grep -w "Vmess TLS" /root/log-install.txt | awk '{print $NF}')
         portws=$(grep -w "Vmess None TLS" /root/log-install.txt | awk '{print $NF}')
         portvlesstls=$(grep -w "Vless TLS" /root/log-install.txt | awk '{print $NF}')
@@ -475,6 +476,7 @@ info_port() {
         env_msg+="Squid Proxy : $portsqd\n"
         env_msg+="Badvpn : $portudpgw\n"
         env_msg+="Nginx : $portnginx\n"
+        env_msg+="SlowDNS : $slowdns\n"
         env_msg+="Vmess TLS : $portwstls\n"
         env_msg+="Vmess HTTP : $portws\n"
         env_msg+="Vless TLS : $portvlesstls\n"
