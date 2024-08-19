@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/IMMANVPN/access/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Budaxcomel/access/main/bot > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/IMMANVPN/access/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Budaxcomel/access/main/bot | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/IMMANVPN/access/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Budaxcomel/access/main/bot | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -80,7 +80,7 @@ IPs="$domen"
 else
 IPs=$(cat /etc/IP)
 fi
-[[ ! -d /var/lib/scrz-prem ]] && exit 0
+[[ ! -d /var/lib/SIJA ]] && exit 0
 [[ ! -f /etc/.maAsiss/res_token ]] && touch /etc/.maAsiss/res_token
 [[ ! -f /etc/.maAsiss/user_flood ]] && touch /etc/.maAsiss/user_flood
 [[ ! -f /etc/.maAsiss/log_res ]] && touch /etc/.maAsiss/log_res
@@ -386,7 +386,7 @@ hargaxray=$(grep -w "Price Xray" /etc/.maAsiss/price | awk '{print $NF}')
         return 0
     else
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "===========================\n⛔ ACCESS DENIED ⛔\n===========================\n\nfor register to be a reseller contact : $admin_bot_panel\n\n===========================\nBot Panel By : @IMMANVPN\n===========================\n"
+            --text "===========================\n⛔ ACCESS DENIED ⛔\n===========================\n\nfor register to be a reseller contact : $admin_bot_panel\n\n===========================\nBot Panel By : @Budaxcomel\n===========================\n"
         return 0
     fi
 }
