@@ -58,7 +58,7 @@ red "Your script need to update first !"
 exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
 echo -ne
-curl -sS https://raw.githubusercontent.com/Budaxcomel/botimman/main/immanvpn_bot.sh | bash -
+curl -sS https://raw.githubusercontent.com/UsPremium/botvpn/main/immanvpn_bot.sh | bash -
 else
 red "Permission Denied!"
 exit 0
